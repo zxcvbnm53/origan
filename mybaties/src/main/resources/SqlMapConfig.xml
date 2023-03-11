@@ -7,12 +7,16 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
+    <typeAliases>
+        <typeAlias type="www.wang.Dao.User" alias="user"></typeAlias>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
 <!--     transactionManager:事务管理
          type: JDBC:就是程序员自己来管理事务的提交和回滚
             MANAGED:由容器来进行事务的管理,例如:spring       -->
             <transactionManager type="JDBC"></transactionManager>
+
 <!--     type:指定数据源的配置方式,是否是连接池
              "POOLED":表明使用数据库连接池
              "UNPOOLED":不使用连接池
